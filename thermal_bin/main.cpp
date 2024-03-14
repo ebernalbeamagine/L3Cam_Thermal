@@ -10,7 +10,7 @@ int main()
     int size = 240 * 320;
 
     //!TODO: Modify this path to read a binary file saved with thermal information
-    std::string file_name = "/home/caf/Escritorio/thermal_binary/130424317.bin";
+    std::string file_name = "130424317.bin";
 
     FILE *thermal_file = std::fopen(file_name.c_str(), "rb");
 
@@ -42,6 +42,6 @@ int main()
 
     cv::Mat image = cv::Mat(240, 320, CV_8UC1, &thermal_color[0]);
     //!TODO: modify this path to save the image file in your system
-    cv::imwrite("/home/caf/Escritorio/thermal_colored.png", image);
+    cv::imwrite("thermal_colored.png", image);
 
 }
